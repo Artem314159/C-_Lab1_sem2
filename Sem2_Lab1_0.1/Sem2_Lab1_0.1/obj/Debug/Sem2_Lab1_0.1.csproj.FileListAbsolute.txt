@@ -1,0 +1,9 @@
+C:\Users\Артём\Desktop\Сайты\Репозиторий\Sem2_Lab1_0.1\Sem2_Lab1_0.1\bin\Debug\Sem2_Lab1_0.1.exe.config
+C:\Users\Артём\Desktop\Сайты\Репозиторий\Sem2_Lab1_0.1\Sem2_Lab1_0.1\bin\Debug\Sem2_Lab1_0.1.exe
+C:\Users\Артём\Desktop\Сайты\Репозиторий\Sem2_Lab1_0.1\Sem2_Lab1_0.1\bin\Debug\Sem2_Lab1_0.1.pdb
+C:\Users\Артём\Desktop\Сайты\Репозиторий\Sem2_Lab1_0.1\Sem2_Lab1_0.1\obj\Debug\Sem2_Lab1_0.1.csprojResolveAssemblyReference.cache
+C:\Users\Артём\Desktop\Сайты\Репозиторий\Sem2_Lab1_0.1\Sem2_Lab1_0.1\obj\Debug\Sem2_Lab1_0._1.Form1.resources
+C:\Users\Артём\Desktop\Сайты\Репозиторий\Sem2_Lab1_0.1\Sem2_Lab1_0.1\obj\Debug\Sem2_Lab1_0._1.Properties.Resources.resources
+C:\Users\Артём\Desktop\Сайты\Репозиторий\Sem2_Lab1_0.1\Sem2_Lab1_0.1\obj\Debug\Sem2_Lab1_0.1.csproj.GenerateResource.Cache
+C:\Users\Артём\Desktop\Сайты\Репозиторий\Sem2_Lab1_0.1\Sem2_Lab1_0.1\obj\Debug\Sem2_Lab1_0.1.exe
+C:\Users\Артём\Desktop\Сайты\Репозиторий\Sem2_Lab1_0.1\Sem2_Lab1_0.1\obj\Debug\Sem2_Lab1_0.1.pdb

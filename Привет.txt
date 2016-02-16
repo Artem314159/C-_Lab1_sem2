@@ -1,1 +1,2 @@
 Console.WriteLine("Однако здравствуйте))");
+return 0;

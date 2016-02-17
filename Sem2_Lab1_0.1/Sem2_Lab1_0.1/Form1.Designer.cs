@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.tsmHelp = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmAboutProg = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmPasteDoc = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmExit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmPasteDoc = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.txtBox = new System.Windows.Forms.TextBox();
+            this.tsmExit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmChangeDateFormat = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmAboutProg = new System.Windows.Forms.ToolStripMenuItem();
+            this.rtxtbox = new System.Windows.Forms.RichTextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +52,53 @@
             this.menuStrip1.Size = new System.Drawing.Size(284, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // tsmFile
+            // 
+            this.tsmFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmPasteDoc,
+            this.toolStripMenuItem1,
+            this.tsmExit});
+            this.tsmFile.Name = "tsmFile";
+            this.tsmFile.Size = new System.Drawing.Size(48, 20);
+            this.tsmFile.Text = "Файл";
+            // 
+            // tsmPasteDoc
+            // 
+            this.tsmPasteDoc.Name = "tsmPasteDoc";
+            this.tsmPasteDoc.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.D)));
+            this.tsmPasteDoc.Size = new System.Drawing.Size(251, 22);
+            this.tsmPasteDoc.Text = "Вставить документ";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(248, 6);
+            // 
+            // tsmExit
+            // 
+            this.tsmExit.Name = "tsmExit";
+            this.tsmExit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
+            this.tsmExit.Size = new System.Drawing.Size(251, 22);
+            this.tsmExit.Text = "Выход";
+            this.tsmExit.Click += new System.EventHandler(this.tsmExit_Click);
+            // 
+            // tsmEdit
+            // 
+            this.tsmEdit.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmChangeDateFormat});
+            this.tsmEdit.Name = "tsmEdit";
+            this.tsmEdit.Size = new System.Drawing.Size(59, 20);
+            this.tsmEdit.Text = "Правка";
+            // 
+            // tsmChangeDateFormat
+            // 
+            this.tsmChangeDateFormat.Name = "tsmChangeDateFormat";
+            this.tsmChangeDateFormat.Size = new System.Drawing.Size(189, 22);
+            this.tsmChangeDateFormat.Text = "Поменять тип даты...";
+            this.tsmChangeDateFormat.ToolTipText = "Поменять тип даты DD.MM.YYYY\r\nна тип YYYY-MM-DD";
+            this.tsmChangeDateFormat.Click += new System.EventHandler(this.tsmChangeDateFormat_Click);
             // 
             // tsmHelp
             // 
@@ -69,67 +116,22 @@
             this.tsmAboutProg.Text = "О программе";
             this.tsmAboutProg.Click += new System.EventHandler(this.tsmAboutProg_Click);
             // 
-            // tsmPasteDoc
+            // rtxtbox
             // 
-            this.tsmPasteDoc.Name = "tsmPasteDoc";
-            this.tsmPasteDoc.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.D)));
-            this.tsmPasteDoc.Size = new System.Drawing.Size(251, 22);
-            this.tsmPasteDoc.Text = "Вставить документ";
-            // 
-            // tsmExit
-            // 
-            this.tsmExit.Name = "tsmExit";
-            this.tsmExit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.tsmExit.Size = new System.Drawing.Size(251, 22);
-            this.tsmExit.Text = "Выход";
-            this.tsmExit.Click += new System.EventHandler(this.tsmExit_Click);
-            // 
-            // tsmFile
-            // 
-            this.tsmFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmPasteDoc,
-            this.toolStripMenuItem1,
-            this.tsmExit});
-            this.tsmFile.Name = "tsmFile";
-            this.tsmFile.Size = new System.Drawing.Size(48, 20);
-            this.tsmFile.Text = "Файл";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(248, 6);
-            // 
-            // txtBox
-            // 
-            this.txtBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBox.Location = new System.Drawing.Point(0, 24);
-            this.txtBox.Multiline = true;
-            this.txtBox.Name = "txtBox";
-            this.txtBox.Size = new System.Drawing.Size(284, 238);
-            this.txtBox.TabIndex = 1;
-            // 
-            // tsmEdit
-            // 
-            this.tsmEdit.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmChangeDateFormat});
-            this.tsmEdit.Name = "tsmEdit";
-            this.tsmEdit.Size = new System.Drawing.Size(59, 20);
-            this.tsmEdit.Text = "Правка";
-            // 
-            // tsmChangeDateFormat
-            // 
-            this.tsmChangeDateFormat.Name = "tsmChangeDateFormat";
-            this.tsmChangeDateFormat.Size = new System.Drawing.Size(189, 22);
-            this.tsmChangeDateFormat.Text = "Поменять тип даты...";
-            this.tsmChangeDateFormat.ToolTipText = "Поменять тип даты DD.MM.YYYY\r\nна тип YYYY-MM-DD";
+            this.rtxtbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtxtbox.Location = new System.Drawing.Point(0, 24);
+            this.rtxtbox.Name = "rtxtbox";
+            this.rtxtbox.Size = new System.Drawing.Size(284, 238);
+            this.rtxtbox.TabIndex = 1;
+            this.rtxtbox.Text = "";
+            this.rtxtbox.TextChanged += new System.EventHandler(this.rtxtbox_TextChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.txtBox);
+            this.Controls.Add(this.rtxtbox);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -152,7 +154,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmExit;
         private System.Windows.Forms.ToolStripMenuItem tsmEdit;
         private System.Windows.Forms.ToolStripMenuItem tsmChangeDateFormat;
-        private System.Windows.Forms.TextBox txtBox;
+        private System.Windows.Forms.RichTextBox rtxtbox;
     }
 }
 

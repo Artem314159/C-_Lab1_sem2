@@ -1,0 +1,26 @@
+char[] arr = rtxtbox.Text.ToCharArray();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (Char.IsNumber(arr[i]) && Char.IsNumber(arr[i + 1]) &&
+                    arr[i + 2] == '.' && Char.IsNumber(arr[i + 3]) &&
+                    Char.IsNumber(arr[i + 4]) && arr[i + 5] == '.' &&
+                    Char.IsNumber(arr[i + 6]) && Char.IsNumber(arr[i + 7]) &&
+                    Char.IsNumber(arr[i + 8]) && Char.IsNumber(arr[i + 9]))
+                {
+                        char[] narr = new char[10];
+
+                        narr[0] = arr[i + 6]; narr[1] = arr[i + 7];
+                        narr[2] = arr[i + 8]; narr[3] = arr[i + 9];
+                        narr[4] = '-'; narr[5] = arr[i + 3];
+                        narr[6] = arr[i + 4]; narr[7] = '-';
+                        narr[8] = arr[i]; narr[9] = arr[i + 1];
+
+                        for (int j = 0; j < 10; j++)
+                            arr[i + j] = narr[j];
+                }
+            }
+            rtxtbox.Text = "";
+            for (int k = 0; k < arr.Length; k++)
+            {
+                rtxtbox.Text += arr[k];
+            }

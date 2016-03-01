@@ -34,39 +34,24 @@ namespace Sem2_Lab1_0._1
 
         private void tsmChangeDateFormat_Click(object sender, EventArgs e)
         {
-            if (rtxtbox.Text != "")
-            {
-                string text = rtxtbox.Text;
-                int data = 0, moon = 0, year = 0;
-                for (int i = 0; i < text.Length; i++)
+            DateTime date;
+            string text = rtxtbox.Text;
+
+            if (String.IsNullOrEmpty(text) == false)
+            {                
+                for (int i = 0; i < (text.Length) - 9; i++)
                 {
                     try
                     {
-                        data = Convert.ToInt32(text.Substring(i, 2));
-                        moon = Convert.ToInt32(text.Substring(i + 3, 2));
-                        year = Convert.ToInt32(text.Substring(i + 6, 4));
+                        date = DateTime.Parse(text.Substring(i, 10));
+                        if (text[i + 2] == '.' && text[i + 5] == '.')
+                        {
+                            rtxtbox.Text = rtxtbox.Text.Replace(text.Substring(i, 10), date.ToString("yyyy-MM-dd"));
+
+                        }
                     }
-                    catch (Exception)
-                    { continue; }
-                    if (text[i + 2] == '.' && text[i + 5] == '.' &&
-                        data <= 31 && data > 0 && moon <= 12 && moon > 0)
+                    catch
                     {
-                        if (data < 10 && moon < 10)
-                            rtxtbox.Text =
-                                    rtxtbox.Text.Replace(("0" + data + "." + "0" + moon + "." + year),
-                                (year + "-" + "0" + moon + "-" + "0" + data));
-                        else if (data < 10)
-                            rtxtbox.Text =
-                                rtxtbox.Text.Replace(("0" + data + "." + moon + "." + year),
-                            (year + "-" + moon + "-" + "0" + data));
-                        else if (moon < 10)
-                            rtxtbox.Text =
-                                rtxtbox.Text.Replace((data + "." + "0" + moon + "." + year),
-                            (year + "-" + "0" + moon + "-" + data));
-                        else
-                            rtxtbox.Text =
-                              rtxtbox.Text.Replace((data + "." + moon + "." + year),
-                          (year + "-" + moon + "-" + data));
                     }
                 }
             }

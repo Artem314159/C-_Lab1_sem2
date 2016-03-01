@@ -70,6 +70,7 @@
             | System.Windows.Forms.Keys.D)));
             this.tsmPasteDoc.Size = new System.Drawing.Size(251, 22);
             this.tsmPasteDoc.Text = "Вставить документ";
+            this.tsmPasteDoc.Click += new System.EventHandler(this.tsmPasteDoc_Click);
             // 
             // toolStripMenuItem1
             // 

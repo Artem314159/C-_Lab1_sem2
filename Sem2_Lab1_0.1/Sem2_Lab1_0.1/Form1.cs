@@ -74,7 +74,7 @@ namespace Sem2_Lab1_0._1
 
         private void tsmPasteDoc_Click(object sender, EventArgs e)
         {
-            rtxtbox.LoadFile("данный текст.rtf");
+
         }
     }
 }

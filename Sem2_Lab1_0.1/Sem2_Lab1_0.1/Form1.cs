@@ -24,7 +24,7 @@ namespace Sem2_Lab1_0._1
 
         private void tsmAboutProg_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Made by Artem Zhulai\nand Ilya Myhalyov.\n(c) 2016", "О программе");
+            MessageBox.Show("Made by Artem Zhulai\nand Ilya Myhalyov.\n(c) 2016", "О программе");                           //Инфо о программе
         }
 
         private void rtxtbox_TextChanged(object sender, EventArgs e)
@@ -37,20 +37,20 @@ namespace Sem2_Lab1_0._1
             DateTime date;
             string text = rtxtbox.Text;
 
-            if (String.IsNullOrEmpty(text) == false)
+            if (String.IsNullOrEmpty(text) == false)                                                                        //Проверка на наличие текста
             {                
-                for (int i = 0; i < (text.Length) - 9; i++)
+                for (int i = 0; i < (text.Length) - 9; i++)                                                                 //Цикл, который выполняется, пока в тексте возможно наличие даты
                 {
                     try
                     {
-                        date = DateTime.Parse(text.Substring(i, 10));
-                        if (text[i + 2] == '.' && text[i + 5] == '.')
+                        date = DateTime.Parse(text.Substring(i, 10));                                                       //Преобразование даты, как строки в объект класса DateTime
+                        if (text[i + 2] == '.' && text[i + 5] == '.')                                                       //Проверка "на дату"
                         {
-                            rtxtbox.Text = rtxtbox.Text.Replace(text.Substring(i, 10), date.ToString("yyyy-MM-dd"));
+                            rtxtbox.Text = rtxtbox.Text.Replace(text.Substring(i, 10), date.ToString("yyyy-MM-dd"));        //Вывод преобразованной даты
 
                         }
                     }
-                    catch
+                    catch                                                                                                   //Обработка исключений
                     {
                     }
                 }
